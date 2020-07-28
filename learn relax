@@ -1,3 +1,83 @@
+namespace：
+  likelihood_function = "LF";
+  efv_estimate   = "EFV";
+  empirical_bayes_factor  = "BF";
+ 
+ lower_bound = "LB";
+  upper_bound = "UB";
+ range01 = {
+        lower_bound: "0",
+        upper_bound: "1"
+    };
+
+    range_almost_01 = {
+        lower_bound: "1e-8",
+        upper_bound: "1"
+    };
+
+    range_gte1 = {
+        lower_bound: "1",
+        upper_bound: "1e10"
+    };
+
+    range_any = {
+        lower_bound: "0",
+        upper_bound: "1e25"
+    };
+
+    range_positive = {
+        lower_bound: "0",
+        upper_bound: "1e5"
+    };
+
+    range_clamp_locals = {
+        lower_bound: "0",
+        upper_bound: "100"
+    };
+    
+   
+   stddev       = "Std.Dev";//标准差
+   square_sum   = "Sq. sum";//平方和
+   variance     = "Variance";//方差
+   cov          = "COV";//协方差
+   
+   efv_estimate_name       = "Equilibrium frequency estimator";平衡频率估计
+   frequency_estimator     = "frequency-estimator";频率估计
+   efv_matrix              = "pi";平衡频率矩阵
+   efv_id                  = "efv-id";平衡频率ID
+   
+   
+   
+ /* Terms accompanying models/frequencies.bf */
+    namespace frequencies {
+        _4x1       = "Nucleotide 4x1 estimator";
+        equal      = "Equal frequencies";
+        CF3x4      = "Corrected 3x4 frequency estimator";
+        F3x4      = "Standard F3x4 codon frequency estimator";
+        F1x4      = "Standard F1x4 codon frequency estimator";
+        _20x1      = "Protein 20x1 estimator";
+        MLE        = "Maximum likelihood frequency estimator";
+        predefined = "Based on a training set";
+        binary     = "Binary character frequency estimator";
+        run_time   = "Run time frequency estimator via matrix inversion"
+    }
+    
+    /* Terms accompanying tasks/genetic_code.bf */
+    namespace genetic_code {
+        synonymous        = "synonymous";
+        nonsynonymous     = "nonsynonymous";
+        weighting_matrix  = "weighting-matrix";
+        count_stop_codons = "count-stop-codons";
+        EPS               = "EPS";
+        EPN               = "EPN";
+        OPS               = "OPS";
+        OPN               = "OPN";
+        NTP               = "NTP";
+        SS                = "SS";
+        NS                = "NS";
+    }
+    
 io.DisplayAnalysisBanner
 selection.io.startTimer 
 io.ReportProgressMessageMD
+nucleotideRate
